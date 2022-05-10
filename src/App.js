@@ -9,11 +9,11 @@ function App() {
       "https://jsonplaceholder.typicode.com/photos"
     ).then((res) => res.json());
     setData(response);
-    console.log(data);
   };
+
   useEffect(() => {
     cardsApi();
-  }, []);
+  });
   return (
     <div className="container">
       {data.map(({ id, title, url }) => (
